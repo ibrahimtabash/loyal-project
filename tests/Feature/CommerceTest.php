@@ -6,6 +6,7 @@ use App\Models\Store;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Str;
+use Inertia\Testing\AssertableInertia as Assert;
 use Tests\TestCase;
 
 class CommerceTest extends TestCase
@@ -60,6 +61,17 @@ class CommerceTest extends TestCase
         $store->update(['is_published' => false]);
         $this->get('/s/'.$store->slug)->assertNotFound();
         $this->post('/s/'.$store->slug.'/checkout', [])->assertNotFound();
+    }
+
+    public function test_public_storefront_exposes_the_selected_theme(): void
+    {
+        $store = $this->store();
+        $store->update(['theme' => 'market', 'accent' => '#075e69']);
+        $this->get('/s/'.$store->slug)->assertOk()->assertInertia(fn (Assert $page) => $page
+            ->component('Storefront')
+            ->where('store.theme', 'market')
+            ->where('store.accent', '#075e69')
+            ->missing('store.user_id'));
     }
 
     public function test_invalid_and_unavailable_items_cannot_be_ordered(): void

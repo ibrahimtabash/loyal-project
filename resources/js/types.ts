@@ -7,7 +7,7 @@ export type Store = {
   city: string | null;
   hero_image: string | null;
   accent: string;
-  theme?: string;
+  theme: string;
   delivery_fee: number;
   whatsapp_phone: string | null;
   is_published?: boolean;

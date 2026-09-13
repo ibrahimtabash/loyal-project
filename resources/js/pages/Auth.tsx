@@ -14,7 +14,7 @@ export default function Auth({ mode }: { mode: "login" | "register" }) {
       <Head title={register ? "أنشئ متجرك" : "تسجيل الدخول"} />
       <section className="auth-aside">
         <Link className="platform-logo" href="/">
-          رِجعة<span>REJAA</span>
+          مَدار<span>MADAR</span>
         </Link>
         <div>
           <Leaf size={48} strokeWidth={1} />

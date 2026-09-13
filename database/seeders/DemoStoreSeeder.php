@@ -26,7 +26,7 @@ class DemoStoreSeeder extends Seeder
             'tagline' => 'تفاصيل صغيرة، تُشبه البيت.',
             'description' => 'قطع نختارها بحب، لتضيف الدفء والبساطة إلى مساحتك. اكتشف أشياء جميلة ليومك، وللزوايا التي تحبّها.',
             'hero_image' => '/images/store-hero.jpg', 'city' => 'رام الله، فلسطين',
-            'currency' => 'ILS', 'delivery_fee' => 2000, 'is_published' => true,
+            'currency' => 'ILS', 'delivery_fee' => 2000, 'theme' => 'roots', 'is_published' => true,
         ]);
         $this->call(DemoRewardsSeeder::class);
         foreach ([

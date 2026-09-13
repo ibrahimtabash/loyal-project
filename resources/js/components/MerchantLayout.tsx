@@ -19,7 +19,7 @@ export default function MerchantLayout({
 }) {
   const page = usePage<{ auth: { user: { name: string } }; flash: { success: string | null } }>();
   return (
-    <div className="merchant-shell">
+    <div className={`merchant-shell ${section === "customers" || section === "rewards" ? "loyalty-workspace" : ""}`}>
       <Head title={title} />
       <MerchantSidebar store={store} section={section} />
       <main className="merchant-main">

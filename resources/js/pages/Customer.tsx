@@ -79,7 +79,7 @@ export default function Customer({
       store={store}
       section="customers"
       title="ملف العميل"
-      description="التفاصيل التي تجعل كل رِجعة أجمل."
+      description="التفاصيل التي تجعل كل زيارة أجمل."
       action={
         <Link className="text-link" href="/customers">
           <ArrowRight size={16} /> كل العملاء
@@ -405,7 +405,7 @@ export default function Customer({
           )}
           {modal === "redeem" && (
             <>
-              <DialogTitle>رِجعة تستحق مكافأة</DialogTitle>
+              <DialogTitle>زيارة تستحق مكافأة</DialogTitle>
               <DialogDescription>
                 اختر المكافأة للعميل. تُخصم النقاط عند تأكيد الاستبدال.
               </DialogDescription>

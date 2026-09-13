@@ -24,7 +24,6 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/compone
 import { money, type Product, type Store } from "../types";
 import { number } from "../loyalty-types";
 import { getStoreTheme } from '../lib/store-themes';
-import '../../css/store-themes.css';
 
 export default function Storefront({
   store,
@@ -268,7 +267,7 @@ export default function Storefront({
           <div>
             <Gift />
             <span>
-              <strong>كل رِجعة إلها قيمة</strong>
+              <strong>كل زيارة إلها قيمة</strong>
               <small>نقاط على المنتجات المشاركة</small>
             </span>
           </div>
@@ -428,7 +427,7 @@ export default function Storefront({
           <section className="public-rewards container" id="store-rewards">
             <div className="section-heading">
               <div>
-                <span className="eyebrow">لكل رِجعة، هدية</span>
+                <span className="eyebrow">لكل زيارة، هدية</span>
                 <h2>اختياراتك اليوم، مكافآتك بكرا.</h2>
               </div>
               <Gift size={30} strokeWidth={1.3} />
@@ -510,7 +509,7 @@ export default function Storefront({
           © {new Date().getFullYear()} {store.name}. جميع الحقوق محفوظة.
         </p>
         <Link href="/" className="powered-by">
-          صُنع بكل حب مع <strong>رِجعة ↗</strong>
+          صُنع بكل حب مع <strong>مَدار ↗</strong>
         </Link>
       </footer>
       {notice && (
@@ -531,7 +530,7 @@ export default function Storefront({
         </button>
       )}
       <Sheet open={cartOpen} onOpenChange={setCartOpen}>
-        <SheetContent side="left" className="cart-sheet" dir="rtl">
+        <SheetContent side="left" className={`cart-sheet theme-${theme.id}`} dir="rtl" style={{ "--store-accent": store.accent } as React.CSSProperties}>
           <SheetTitle className="panel-title">
             سلة اختياراتك <span>({count})</span>
           </SheetTitle>
@@ -718,7 +717,7 @@ export default function Storefront({
           if (!open) setDetail(null);
         }}
       >
-        <DialogContent className="product-dialog" dir="rtl">
+        <DialogContent className={`product-dialog theme-${theme.id}`} dir="rtl" style={{ "--store-accent": store.accent } as React.CSSProperties}>
           {detail && (
             <>
               <div className="detail-image">

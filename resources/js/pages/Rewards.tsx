@@ -50,7 +50,7 @@ export default function Rewards({
     <MerchantLayout
       store={store}
       section="rewards"
-      title="سبب جميل لرِجعة جديدة."
+      title="سبب جميل لزيارة جديدة."
       description="اصنع مكافآت يحبّها عملاؤك، وحدّد نقاطها والكمية المتاحة."
       action={
         <button className="button button-dark" onClick={() => edit()}>
@@ -116,7 +116,7 @@ export default function Rewards({
                   {number(reward.points_cost)} نقطة
                 </span>
                 <h2>{reward.name}</h2>
-                <p>{reward.description || "مكافأة جميلة تستحق الرِجعة."}</p>
+                <p>{reward.description || "مكافأة جميلة تستحق العودة."}</p>
                 <div>
                   <small>
                     {reward.stock === null
@@ -144,7 +144,7 @@ export default function Rewards({
       <Pagination page={rewards} label="صفحات المكافآت" />
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="merchant-dialog" dir="rtl">
-          <DialogTitle>{id ? "تعديل المكافأة" : "مكافأة تستحق الرِجعة"}</DialogTitle>
+          <DialogTitle>{id ? "تعديل المكافأة" : "مكافأة تستحق العودة"}</DialogTitle>
           <DialogDescription>وضّح ما سيحصل عليه العميل، وعدد النقاط المطلوبة.</DialogDescription>
           <form
             className="merchant-form"

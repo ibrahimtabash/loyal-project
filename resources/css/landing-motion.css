@@ -1,0 +1,52 @@
+.wisal-landing .wisal-hero { padding-top: 48px; }
+.wisal-landing .wisal-hero h1 { font-size: clamp(38px, 5.6vw, 80px); margin: 18px 0; }
+.ravo-depth-section { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; margin: 85px 20px 0; padding: 70px max(30px, calc((100vw - 1220px)/2)); border-radius: 32px; overflow: hidden; }
+.ravo-depth-points { background: #e9f2da; color: #17362d; }
+.ravo-depth-store { background: #111e34; color: #f5f9ff; }
+.depth-copy { position: relative; z-index: 1; }
+.depth-copy h2 { font-size: clamp(34px, 4vw, 56px); line-height: 1.35; font-weight: 700; margin: 22px 0; }
+.depth-copy p { font-size: 15px; line-height: 2; max-width: 450px; margin-bottom: 28px; opacity: .8; }
+.depth-copy .wisal-kicker { font-size: 10px; letter-spacing: .7px; }
+.depth-scene { height: 460px; position: relative; perspective: 1100px; transform-style: preserve-3d; display: grid; place-items: center; }
+.depth-coin { width: 240px; height: 240px; position: relative; transform-style: preserve-3d; transform: rotateY(-25deg) rotateX(12deg); }
+.coin-front, .coin-back, .coin-edge { position: absolute; inset: 0; border-radius: 50%; background: #c8ee83; border: 2px solid #668f3d; }
+.coin-front, .coin-back { display: flex; flex-direction: column; align-items: center; justify-content: center; backface-visibility: hidden; box-shadow: inset 0 0 0 8px #afd464, inset 0 0 0 10px #608743; }
+.coin-front { transform: translateZ(7px); background: radial-gradient(circle at 30% 20%, #e5ffb7, #a7d35b); }
+.coin-front > svg { position: absolute; top: 28px; left: 26px; width: 25px; height: 25px; }
+.coin-front b { font: 700 110px 'DM Sans'; line-height: 1.1; }.coin-front small { font: 8px 'DM Sans'; letter-spacing: 2px; }
+.coin-back { transform: rotateY(180deg) translateZ(7px); gap: 20px; background: linear-gradient(130deg, #e0ffb8, #9dbd5e); }.coin-back span { font: 700 21px 'DM Sans'; letter-spacing: 5px; }
+.coin-edge { background: #76964b; backface-visibility: hidden; }
+.depth-orbit { position: absolute; width: 370px; height: 370px; border: 1px solid #63874450; border-radius: 50%; transform: rotateX(60deg) rotateZ(-25deg); }
+.orbit-two { width: 425px; height: 425px; transform: rotateX(-35deg) rotateY(35deg); border-style: dashed; }
+.depth-satellite { position: absolute; display: grid; place-items: center; width: 68px; height: 68px; border: 1px solid #ffffffcc; border-radius: 20px; background: #ffffffe0; box-shadow: 10px 15px 30px #31502815; }
+.satellite-a { top: 45px; right: 20px; }.satellite-b { bottom: 55px; left: 5px; }
+.depth-browser { position: absolute; width: 260px; height: 330px; border-radius: 20px; border: 1px solid #ffffff80; padding: 20px; box-shadow: 0 20px 65px #0004; transform: rotateY(-20deg) rotateX(10deg); backface-visibility: hidden; overflow: hidden; }
+.browser-front { background: #fff; color: #172723; z-index: 3; }
+.browser-front header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; font-size: 14px; }
+.browser-front img { width: 100%; height: 205px; object-fit: cover; border-radius: 10px; }
+.browser-front footer { display: flex; align-items: center; justify-content: space-between; font-size: 15px; font-weight: 600; margin-top: 18px; }
+.browser-middle { background: #c7f180; color: #17362d; z-index: 2; display: flex; align-items: center; flex-direction: column; justify-content: space-around; transform: translate(-35px, -30px) rotateY(-20deg); font-size: 13px; }
+.browser-back { background: #54b9ff; color: #0d2944; transform: translate(40px, 25px) rotateY(-20deg); font-size: 14px; padding-top: 30px; }
+.depth-people { display: flex; gap: 8px; margin-top: 45px; }.depth-people span { width: 55px; height: 55px; background: #e6f6ff; border-radius: 50%; display: grid; place-items: center; font-size: 26px; }
+.wisal-landing[data-motion="off"] *, .wisal-landing[data-motion="off"] *::before, .wisal-landing[data-motion="off"] *::after { animation: none !important; transition: none !important; }
+@media(max-width:800px) {
+  .ravo-depth-section { grid-template-columns: 1fr; gap: 15px; padding: 40px 25px; margin: 55px 8px 0; border-radius: 24px; }
+  .depth-scene { height: 380px; }.depth-coin { width: 200px; height: 200px; }.coin-front b { font-size: 90px; }.coin-front small { font-size: 6px; }
+  .depth-orbit { width: 270px; height: 270px; }.orbit-two { width: 315px; height: 315px; }
+  .depth-browser { width: 220px; height: 290px; }.browser-front img { height: 175px; }
+  .depth-satellite { width: 52px; height: 52px; }.satellite-a { right: 4px; }.satellite-b { left: 0; }
+}
+@media(prefers-reduced-motion:reduce) { .film-shot { will-change: auto; } }
+
+/* Flatten sibling compositing: card order stays fixed while each card keeps its 3D tilt. */
+.ravo-depth-store { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.store-scene { height: 460px; min-width: 0; display: grid; place-items: center; transform-style: flat; isolation: isolate; }
+.store-scene .depth-browser { position: absolute; width: min(260px, 65%); height: 330px; margin: 0; transform-style: flat; transform-origin: center; box-shadow: 0 18px 36px #0003; }
+.store-scene .browser-front { z-index: 3; transform: rotateY(-18deg) rotateX(8deg); }
+.store-scene .browser-middle { z-index: 2; transform: translate(-18%, -10%) rotateY(-18deg) rotateX(8deg); }
+.store-scene .browser-back { z-index: 1; transform: translate(18%, 10%) rotateY(-18deg) rotateX(8deg); }
+.store-scene .depth-people { gap: 5px; }
+.store-scene .depth-people span { width: 40px; height: 40px; font-size: 21px; flex-shrink: 0; }
+@media(max-width:1000px) { .ravo-depth-store { grid-template-columns: minmax(0, 1fr); gap: 35px; }.store-scene { width: min(100%, 540px); margin-inline: auto; } }
+@media(max-width:800px) { .store-scene { height: 400px; }.store-scene .depth-browser { width: min(220px, 65%); height: 290px; padding: 16px; }.store-scene .browser-front img { height: 175px; }.store-scene .browser-front footer { font-size: 13px; } }
+@media(max-width:420px) { .store-scene .depth-browser { padding: 12px; }.store-scene .depth-people span { width: 30px; height: 30px; font-size: 17px; }.store-scene .browser-middle, .store-scene .browser-back { font-size: 11px; } }

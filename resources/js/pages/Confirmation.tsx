@@ -1,17 +1,19 @@
 import { Head, Link } from "@inertiajs/react";
 import { Check, ArrowLeft, MessageCircle, Package } from "lucide-react";
 import { money, type Order } from "../types";
+import { getStoreTheme } from "../lib/store-themes";
 export default function Confirmation({
   order,
   store,
   whatsappUrl,
 }: {
   order: Order;
-  store: { name: string; slug: string };
+  store: { name: string; slug: string; accent?: string; theme?: string };
   whatsappUrl: string;
 }) {
+  const theme = getStoreTheme(store.theme);
   return (
-    <main className="confirmation-page">
+    <main className={`confirmation-page theme-${theme.id}`} style={{ "--store-accent": store.accent || theme.accent } as React.CSSProperties}>
       <Head title={`طلبك #${order.id}`} />
       <Link className="text-link" href={`/s/${store.slug}`}>
         <ArrowLeft size={17} /> العودة إلى {store.name}

@@ -1,6 +1,5 @@
 import { Check } from 'lucide-react';
 import { storeThemes } from '../lib/store-themes';
-import '../../css/store-themes.css';
 
 export default function ThemePicker({ value, onChange }: { value: string; onChange: (id: string, accent: string) => void }) {
   return <fieldset className="theme-picker">

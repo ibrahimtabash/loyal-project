@@ -1,0 +1,167 @@
+:root { --wisal-blue: #45adf4; --wisal-ink: #080808; --wisal-soft: #f4f5f7; }
+.wisal-landing { background: #fff; color: var(--wisal-ink); min-height: 100vh; }
+.wisal-header { height: 94px; max-width: 1360px; margin: auto; padding: 0 36px; display: flex; align-items: center; justify-content: space-between; gap: 36px; }
+.wisal-logo { color: #168fff; font-size: 38px; line-height: 1; font-weight: 800; letter-spacing: -2px; display: inline-flex; align-items: center; gap: 10px; transform: skew(-5deg); }
+.wisal-logo span { color: #111; font: 700 8px "DM Sans"; letter-spacing: 2px; transform: skew(5deg); }
+.wisal-header nav { display: flex; gap: 34px; font-size: 14px; font-weight: 600; }
+.wisal-header nav a { padding: 13px 0; border-bottom: 2px solid transparent; }
+.wisal-header nav a:hover { border-color: #168fff; }
+.wisal-auth, .wisal-hero-actions { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; }
+.wisal-pill { min-height: 50px; padding: 12px 24px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; font-weight: 700; transition: transform .2s, box-shadow .2s; }
+.wisal-pill:hover { transform: translateY(-2px); box-shadow: 0 7px 0 #1112; }
+.wisal-pill-dark { background: #080808; color: #fff; }
+.wisal-pill-light { background: #fff; color: #111; }
+.wisal-hero { margin: 18px 20px 0; min-height: 800px; background: var(--wisal-blue); border-radius: 30px; padding: 78px 40px 0; text-align: center; position: relative; overflow: hidden; }
+.wisal-kicker { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; }
+.wisal-hero h1 { font-size: clamp(48px, 6.2vw, 94px); line-height: 1.35; letter-spacing: -2px; font-weight: 800; margin: 26px 0; }
+.wisal-hero > p { font-size: clamp(16px, 1.6vw, 21px); line-height: 1.7; max-width: 680px; margin: auto; }
+.wisal-hero-actions { justify-content: center; margin-top: 27px; }
+.wisal-stage { position: relative; max-width: 1080px; height: 410px; margin: 58px auto 0; border-radius: 34px 34px 0 0; overflow: visible; }
+.wisal-stage > img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; filter: saturate(1.08); }
+.wisal-stage::after { content: ''; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px #fff4; pointer-events: none; }
+.wisal-float { position: absolute; z-index: 2; display: flex; align-items: center; gap: 10px; background: #fff; padding: 13px 17px; border-radius: 999px; box-shadow: 0 14px 35px #09263b33; font-size: 12px; white-space: nowrap; }
+.wisal-float > span:first-child:not(:only-child) { display: grid; place-items: center; }
+.wisal-float-customer { top: 65px; right: -30px; }
+.wisal-float-customer > span { background: #fff0a8; width: 30px; height: 30px; border-radius: 50%; font-weight: 800; }
+.wisal-float-customer > svg { color: #09854a; }
+.wisal-float-points { top: 160px; left: -35px; background: #fff09c; }
+.wisal-float-reward { bottom: 40px; right: 13%; background: #161616; color: white; border-radius: 16px; }
+.wisal-float small, .wisal-float b { display: block; text-align: right; }
+.wisal-float small { font-size: 9px; opacity: .68; margin-bottom: 2px; }
+.wisal-proof { min-height: 80px; display: flex; justify-content: center; align-items: center; gap: clamp(25px, 5vw, 80px); padding: 20px 35px; border-bottom: 1px solid #ddd; flex-wrap: wrap; }
+.wisal-proof span { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; }
+.wisal-proof svg { color: #087ddd; }
+.wisal-story { max-width: 1280px; margin: auto; padding: 110px 30px; }
+.wisal-section-heading { display: grid; grid-template-columns: 180px 1.2fr 1fr; align-items: end; gap: 40px; margin-bottom: 50px; }
+.wisal-section-heading > span { font-size: 12px; font-weight: 700; color: #1684d7; align-self: start; }
+.wisal-section-heading h2, .wisal-commerce h2 { font-size: clamp(42px, 5vw, 68px); line-height: 1.12; letter-spacing: -2px; font-weight: 800; }
+.wisal-section-heading p, .wisal-commerce p { line-height: 1.9; color: #5f6267; font-size: 15px; }
+.wisal-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.wisal-feature-grid article { min-height: 330px; padding: 32px; border-radius: 25px; background: #f3f4f5; display: flex; flex-direction: column; align-items: flex-start; position: relative; }
+.wisal-feature-grid article:nth-child(2) { background: #dff1ff; }
+.wisal-feature-grid article:nth-child(3) { background: #fff0a8; }
+.wisal-feature-grid h3 { margin-top: auto; font-size: 25px; font-weight: 800; }
+.wisal-feature-grid p { font-size: 13px; line-height: 1.8; color: #5e6265; margin: 10px 0 17px; }
+.wisal-feature-number { position: absolute; left: 28px; top: 26px; font: 700 12px "DM Sans"; }
+.wisal-commerce { margin: 0 20px; min-height: 580px; padding: 70px max(35px, calc((100vw - 1200px)/2)); border-radius: 30px; background: #111; color: white; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 80px; overflow: hidden; }
+.wisal-commerce p { color: #bbb; max-width: 490px; margin: 24px 0 30px; }
+.wisal-commerce .wisal-kicker { color: #75c5ff; margin-bottom: 22px; }
+.wisal-theme-stack { height: 400px; position: relative; }
+.wisal-theme-card { position: absolute; width: 270px; height: 350px; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; justify-content: flex-end; background: center/cover url('/images/store-hero.jpg'); box-shadow: 0 25px 60px #0008; overflow: hidden; }
+.wisal-theme-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent, #000b); }
+.wisal-theme-card small, .wisal-theme-card b { position: relative; z-index: 1; }
+.wisal-theme-card small { font-size: 11px; }.wisal-theme-card b { font-size: 24px; margin-top: 7px; }
+.wisal-theme-card.card-one { right: 5%; transform: rotate(8deg); }
+.wisal-theme-card.card-two { right: 30%; transform: rotate(-5deg); background-image: url('/images/ceramics.jpg'); }
+.wisal-theme-card.card-three { right: 50%; transform: rotate(3deg); background-image: url('/images/decor.jpg'); }
+.wisal-final-cta { text-align: center; padding: 120px 25px; }
+.wisal-final-cta > span { color: #1684d7; font-size: 13px; font-weight: 700; }
+.wisal-final-cta h2 { font-size: clamp(42px, 6vw, 80px); line-height: 1.2; letter-spacing: -3px; margin: 15px 0 35px; }
+.wisal-footer { border-top: 1px solid #ddd; min-height: 110px; padding: 25px max(30px, calc((100vw - 1280px)/2)); display: flex; align-items: center; justify-content: space-between; gap: 25px; font-size: 11px; }
+
+/* Loyalty is a clear blue sub-platform inside the merchant workspace. */
+.loyalty-workspace { --forest: #0879d1; --line: #dce7ee; background: #f4f8fb; }
+.loyalty-workspace .merchant-sidebar { background: #0b1520; color: #eaf5ff; }
+.loyalty-workspace .merchant-sidebar .platform-logo { color: #45adf4; }
+.loyalty-workspace .merchant-sidebar .platform-logo span, .loyalty-workspace .sidebar-store small { color: #98aabb; border-color: #40505e; }
+.loyalty-workspace .merchant-sidebar nav a { color: #9fb1c0; border-radius: 999px; }
+.loyalty-workspace .merchant-sidebar nav a.active { background: #45adf4; color: #07131d; font-weight: 700; }
+.loyalty-workspace .merchant-main { background: #f4f8fb; }
+.loyalty-workspace .merchant-heading h1 { font-weight: 800; letter-spacing: -1px; }
+.loyalty-workspace .button-dark { background: #111; border-radius: 999px; }
+.loyalty-workspace .merchant-panel, .loyalty-workspace .stat-card, .loyalty-workspace .customer-profile { border-radius: 20px; border-color: #dbe7ef; box-shadow: 0 5px 20px #2e66820a; }
+.loyalty-workspace .loyalty-stats .stat-card:nth-child(2) { background: #dff1ff; }
+.loyalty-workspace .loyalty-stats .stat-card:nth-child(3) { background: #fff0a8; }
+.loyalty-workspace .points-pill, .loyalty-workspace .loyalty-tabs button.active { background: #dff1ff; color: #0879d1; }
+.loyalty-workspace .customer-avatar { background: #45adf4; color: #08131c; font-weight: 800; }
+.loyalty-workspace .customer-search { border-radius: 999px; background: #f7fafc; }
+.loyalty-workspace .loyalty-guide { border-radius: 18px; background: #0c7ed3; color: white; }
+.loyalty-workspace .loyalty-guide p, .loyalty-workspace .loyalty-guide .text-link { color: #dff1ff; }
+
+@media (max-width: 800px) {
+  .wisal-header { height: 78px; padding: 0 20px; }.wisal-header nav { display: none; }.wisal-logo { font-size: 31px; }.wisal-auth > a:first-child { display: none; }
+  .wisal-pill { min-height: 45px; padding: 10px 18px; font-size: 12px; }
+  .wisal-hero { margin: 8px; padding: 55px 20px 0; min-height: 700px; border-radius: 23px; }.wisal-hero h1 { letter-spacing: -3px; }.wisal-stage { height: 350px; margin-top: 45px; }.wisal-float-customer { right: 10px; }.wisal-float-points { left: 8px; top: 180px; }.wisal-float-reward { right: 15px; }
+  .wisal-section-heading { grid-template-columns: 1fr; gap: 20px; }.wisal-section-heading > span { align-self: auto; }.wisal-feature-grid { grid-template-columns: 1fr; }.wisal-feature-grid article { min-height: 250px; }
+  .wisal-commerce { grid-template-columns: 1fr; gap: 50px; padding: 55px 30px; }.wisal-theme-stack { height: 330px; }.wisal-theme-card { width: 210px; height: 290px; }.wisal-theme-card.card-three { right: 40%; }
+  .wisal-footer { flex-wrap: wrap; }.wisal-footer p { display: none; }
+}
+@media (max-width: 520px) {
+  .wisal-logo span { display: none; }.wisal-hero { min-height: 630px; padding-top: 42px; }.wisal-hero h1 { font-size: 56px; }.wisal-hero > p { font-size: 14px; }.wisal-hero-actions { flex-direction: column; }.wisal-stage { height: 260px; margin-top: 36px; }.wisal-float { padding: 9px 11px; font-size: 9px; }.wisal-float-points { top: 120px; }.wisal-float-reward { bottom: 18px; }
+  .wisal-proof { justify-content: flex-start; gap: 16px; }.wisal-story { padding: 75px 20px; }.wisal-section-heading h2, .wisal-commerce h2 { font-size: 42px; }.wisal-commerce { margin: 0 8px; border-radius: 23px; }.wisal-theme-card { width: 170px; height: 250px; }.wisal-final-cta { padding: 85px 20px; }.wisal-final-cta h2 { letter-spacing: -2px; }
+}
+
+/* Preserve the complete photograph at its natural ratio on every screen. */
+.wisal-hero { padding-bottom: 28px; min-height: 0; }
+.wisal-stage { height: auto; max-width: 1264px; border-radius: 32px; }
+.wisal-stage > img { height: auto; object-fit: contain; filter: none; }
+.wisal-stage.ravo-compact-hero { max-width: 1080px; margin-top: 36px; transition: opacity .85s ease, transform .85s cubic-bezier(.2,.65,.3,1); }
+.ravo-compact-hero.reveal-pending { opacity: 0; transform: translateY(30px) scale(.98); }
+.ravo-compact-hero.reveal-visible { opacity: 1; transform: none; }
+.ravo-compact-hero.reveal-pending .wisal-float { animation-play-state: paused; }
+.ravo-reward-story { max-width: 1260px; margin: 90px auto 0; padding: 0 30px; display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 60px; }
+.ravo-reward-story > img { width: 100%; height: auto; border-radius: 26px; }
+.ravo-reward-story h2 { font-size: clamp(32px, 4vw, 54px); font-weight: 800; line-height: 1.35; margin: 20px 0; }
+.ravo-reward-story p { color: #58616b; line-height: 1.9; margin-bottom: 24px; }
+@media (max-width: 800px) {
+  .ravo-reward-story { grid-template-columns: 1fr; gap: 26px; padding: 0 22px; margin-top: 60px; }
+  .ravo-compact-hero .wisal-float { padding: 7px 9px; }
+  .ravo-compact-hero .wisal-float-customer { top: 8%; right: 2%; }
+  .ravo-compact-hero .wisal-float-points { top: auto; bottom: 6%; left: 2%; }
+  .ravo-compact-hero .wisal-float-reward { display: none; }
+}
+.ravo-demo-caption { display: block; font-size: 11px; margin-top: 20px; opacity: .75; }
+.wisal-float { animation: ravo-float 6s ease-in-out infinite; }
+.wisal-float-points { animation-delay: -2s; }
+.wisal-float-reward { animation-delay: -4s; }
+.wisal-feature-grid article { transition: transform .25s, box-shadow .25s; }
+.wisal-feature-grid article:hover { transform: translateY(-7px); box-shadow: 0 18px 35px #16233412; }
+.ravo-steps, .ravo-faq { max-width: 1260px; margin: auto; padding: 100px 30px; }
+.ravo-section-intro > span { color: #0879c9; font-size: 13px; font-weight: 700; }
+.ravo-section-intro h2 { font-size: clamp(36px, 4.5vw, 62px); line-height: 1.3; margin: 12px 0 20px; font-weight: 800; letter-spacing: -1px; }
+.ravo-section-intro p { color: #58616b; line-height: 1.9; max-width: 540px; }
+.ravo-step-layout { display: grid; grid-template-columns: 1fr 1.25fr; gap: 55px; margin-top: 45px; }
+.ravo-step-buttons { display: flex; flex-direction: column; gap: 12px; justify-content: center; }
+.ravo-step-buttons button { display: flex; align-items: center; gap: 20px; text-align: right; padding: 24px; background: #f4f5f7; border: 2px solid transparent; border-radius: 18px; transition: background .2s; }
+.ravo-step-buttons button.active { background: #45adf4; border-color: #111; }
+.ravo-step-buttons button > span { font: 700 14px 'DM Sans'; }
+.ravo-step-buttons button b { flex: 1; font-size: 20px; }
+.ravo-step-preview { background: #e5f4ff; border-radius: 28px; padding: 40px; min-height: 450px; }
+.ravo-step-content { animation: ravo-enter .3s ease-out; }
+.ravo-step-symbol { width: 95px; height: 95px; background: #fff; border-radius: 24px; display: grid; place-items: center; margin-bottom: 30px; transform: rotate(-6deg); }
+.ravo-step-content > small { font-size: 12px; color: #245677; }
+.ravo-step-content h3 { font-size: 29px; font-weight: 800; margin: 12px 0; }
+.ravo-step-content p { line-height: 1.9; font-size: 15px; min-height: 86px; }
+.ravo-step-progress { display: flex; gap: 6px; margin: 28px 0; }
+.ravo-step-progress i { height: 5px; flex: 1; background: #bedbed; border-radius: 10px; }
+.ravo-step-progress .filled { background: #111; }
+.ravo-faq { display: grid; grid-template-columns: 1fr 1.5fr; gap: 75px; border-top: 1px solid #e1e6ea; }
+.ravo-faq details { border-bottom: 1px solid #dce2e7; }
+.ravo-faq summary { list-style: none; cursor: pointer; padding: 24px 0; display: flex; gap: 20px; align-items: center; justify-content: space-between; font-size: 18px; font-weight: 600; }
+.ravo-faq summary::-webkit-details-marker { display: none; }
+.ravo-faq summary > span { font: 28px 'DM Sans'; transition: transform .2s; }
+.ravo-faq details[open] summary > span { transform: rotate(45deg); }
+.ravo-faq details p { color: #59636e; font-size: 15px; line-height: 2; padding-bottom: 24px; }
+@keyframes ravo-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@keyframes ravo-enter { from { opacity: .4; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 800px) {
+  .ravo-step-layout, .ravo-faq { grid-template-columns: 1fr; gap: 28px; }
+  .ravo-steps, .ravo-faq { padding: 65px 22px; }
+  .wisal-header { flex-wrap: wrap; height: auto; min-height: 78px; gap: 12px; padding-block: 16px; }
+  .wisal-header nav { display: flex; order: 3; width: 100%; overflow-x: auto; gap: 22px; font-size: 12px; white-space: nowrap; }
+  .wisal-stage { height: auto; }
+}
+@media (max-width: 520px) {
+  .wisal-hero h1 { font-size: 43px; line-height: 1.4; letter-spacing: -1px; }
+  .wisal-stage { height: auto; border-radius: 18px; }
+  .wisal-float-customer { top: 8%; right: 5%; }
+  .wisal-float-points { top: 48%; left: 2%; }
+  .wisal-float-reward { bottom: 5%; right: 5%; }
+  .wisal-float b { font-size: 9px; }
+  .ravo-step-preview { padding: 25px; }
+  .ravo-step-buttons button { padding: 18px; }
+  .ravo-step-content h3 { font-size: 25px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wisal-landing *, .wisal-landing *::before, .wisal-landing *::after { animation: none !important; transition: none !important; }
+}

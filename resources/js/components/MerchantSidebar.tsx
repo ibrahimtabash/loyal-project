@@ -26,7 +26,7 @@ export default function MerchantSidebar({
   return (
     <aside className="merchant-sidebar">
       <Link className="platform-logo" href="/">
-        رِجعة<span>REJAA</span>
+        مَدار<span>MADAR</span>
       </Link>
       <div className="sidebar-store">
         {store.name}

@@ -104,7 +104,7 @@ class StorefrontController extends Controller
         }
 
         return Inertia::render('Confirmation', [
-            'order' => $order, 'store' => $store->only('name', 'slug'),
+            'order' => $order, 'store' => $store->only('name', 'slug', 'accent', 'theme'),
             'whatsappUrl' => 'https://wa.me/'.$store->whatsapp_phone.'?text='.rawurlencode($message),
         ]);
     }

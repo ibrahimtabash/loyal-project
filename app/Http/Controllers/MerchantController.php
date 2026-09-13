@@ -46,7 +46,7 @@ class MerchantController extends Controller
             'whatsapp_phone' => ['nullable', 'required_if:is_published,true,1', 'regex:/^[1-9][0-9]{7,14}$/'],
             'delivery_fee' => 'required|integer|min:0|max:100000',
             'accent' => ['required', 'regex:/^#[a-fA-F0-9]{6}$/'],
-            'theme' => ['sometimes', 'required', Rule::in(Store::THEMES)],
+            'theme' => ['required', Rule::in(Store::THEMES)],
             'hero_image' => ['nullable', 'string', 'max:500', new StoreImage($store->id)], 'is_published' => 'required|boolean',
         ]);
         DB::transaction(function () use ($store, $data) {
